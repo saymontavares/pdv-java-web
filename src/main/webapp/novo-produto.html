@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Vendas · Dashboard</title>
+        
+        <!-- Bootstrap core CSS -->
+        <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <style>
+            .bd-placeholder-img {
+	            font-size: 1.125rem;
+	            text-anchor: middle;
+	            -webkit-user-select: none;
+	            -moz-user-select: none;
+	            user-select: none;
+            }
+            @media (min-width: 768px) {
+            	.bd-placeholder-img-lg {
+            		font-size: 3.5rem;
+            	}
+            }
+        </style>
+        <!-- Custom styles for this template -->
+        <link href="https://getbootstrap.com/docs/5.0/examples/dashboard/dashboard.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">PDV</a>
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                    <div class="position-sticky pt-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">
+	                                <span data-feather="home"></span>
+	                                Produtos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                <span data-feather="file"></span>
+                                Vendas
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Novo Produto</h1>
+                    </div>
+                    <div class="row">
+                    	<form action="cadastrar-produto" method="post" name="form_novo_produto">
+							<div class="mb-3">
+								<label for="nome" class="form-label">Nome do Produto</label>
+						    	<input type="text" class="form-control" id="nome" name="nome">
+						  	</div>
+						  	
+						  	<div class="mb-3">
+								<label for="qtd" class="form-label">Quantidade Disponível</label>
+						    	<input type="number" class="form-control" id="qtd" name="qtd" min="1">
+						  	</div>
+						  	<button type="submit" class="btn btn-primary">Salvar</button>
+						</form>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
